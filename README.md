@@ -14,3 +14,4 @@ Los perfiles conteneran:
     
 Debe de tener minimo 3 clases y 3 id para el proyecto y el uso correcto de etiquetas html y css.
 
+01: Nico
