@@ -1,0 +1,168 @@
+/* 1. RESET Y FUENTES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. LAYOUT PRINCIPAL */
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column; /* Apila el título y la tarjeta verticalmente */
+    align-items: center;
+    padding-top: 50px;
+    min-height: 100vh;
+    gap: 40px; /* Separación entre el título y la tarjeta */
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.8rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 3. CONTENEDOR 3D (La magia del giro) */
+.card-container {
+    width: 320px;
+    /* Altura fija suficiente para que quepa toda tu información */
+    height: 750px; 
+    perspective: 1000px; /* Le da profundidad al giro 3D */
+}
+
+/* El elemento que realmente rota */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s ease; /* Velocidad y fluidez del giro */
+    transform-style: preserve-3d;
+}
+
+/* El disparador: Al poner el mouse en el contenedor, gira el interior */
+.card-container:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* 4. ESTILOS COMPARTIDOS (Frente y Dorso) */
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; /* Oculta la "espalda" de los elementos */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* 5. CARA FRONTAL */
+.card-front {
+    background-color: #f06a37; /* El color naranja de tu diseño */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 6. LA IMAGEN Y SU BORDE CIRCULAR */
+.img-border {
+    margin-top: 35px; /* Lo separa del borde superior de la tarjeta */
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Hace el borde circular */
+    background-color: #ffffff;
+    padding: 5px; /* Grosor del borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Recorta lo que sobresalga */
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Hace el contenedor interior circular */
+    overflow: hidden;
+    background-color: #2c3e50; /* Fondo por si tu avatar es transparente */
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la foto se estire */
+}
+
+/* 7. TEXTO Y DATOS PERSONALES */
+.card-data {
+    width: 100%;
+    padding: 20px 30px;
+    color: #ffffff; /* Texto blanco para contrastar con el naranja */
+}
+
+.card-data section {
+    margin-bottom: 20px;
+}
+
+/* Títulos de las preguntas (Name, Age, etc.) */
+.card-data h3 {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75); /* Blanco un poco transparente */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Respuestas (Nicolas, 21, etc.) */
+.card-data p {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea separadora sutil */
+    padding-bottom: 6px;
+}
+
+.card-data p:last-child {
+    border-bottom: none; /* Quita la línea del último elemento */
+}
+
+/* 8. CARA TRASERA (Proyectos) */
+.card-back {
+    background-color: #2c3e50; /* Azul oscuro elegante */
+    color: white;
+    transform: rotateY(180deg); /* Esta cara empieza volteada a 180 grados */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.card-back h2 {
+    margin-bottom: 30px;
+    color: #f06a37; /* Título naranja para combinar con el frente */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-back ul {
+    list-style: none; /* Quita los puntos de la lista */
+    width: 100%;
+}
+
+.card-back li {
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo semi-transparente */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.card-back li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Brilla un poco al pasar el mouse */
+}
