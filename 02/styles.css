@@ -1,0 +1,76 @@
+/* Configuración general del cuerpo */
+body {
+    background-color: #f0f8ff; 
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Encabezado y Avatar */
+#header-principal {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 2px solid #d1e3f3;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #87ceeb;
+    margin-bottom: 1rem;
+}
+
+/* Títulos y Subtítulos */
+#titulo-nombre {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.subtitulo {
+    color: #5d6d7e;
+    font-style: italic;
+}
+
+/* Secciones de contenido */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2980b9;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Listas de datos */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
