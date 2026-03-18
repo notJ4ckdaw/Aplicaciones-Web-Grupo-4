@@ -1,12 +1,10 @@
-/* 1. RESET Y FUENTES */
-* {
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 2. LAYOUT PRINCIPAL */
 body {
     background-color: #f4f4f9;
     display: flex;
@@ -22,24 +20,19 @@ header h1 {
     font-size: 2.8rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
-
-/* NUEVO: Contenedor para alinear tarjetas */
 .portafolios-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Espacio entre tarjetas */
+    gap: 40px; 
     width: 100%;
     max-width: 1200px;
 }
-
-/* 3. CONTENEDOR 3D */
 .card-container {
     width: 320px;
     height: 750px; 
     perspective: 1000px;
 }
-
 .card-inner {
     width: 100%;
     height: 100%;
@@ -51,8 +44,6 @@ header h1 {
 .card-container:hover .card-inner {
     transform: rotateY(180deg);
 }
-
-/* 4. ESTILOS COMPARTIDOS */
 .card-front, .card-back {
     width: 100%;
     height: 100%;
@@ -64,20 +55,15 @@ header h1 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
-
-/* 5. CARA FRONTAL */
 .card-front {
-    background-color: #f06a37; /* Color naranja (Nicolas) */
+    background-color: #f06a37; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .joyce-theme {
     background-color: #c97ee9; 
 }
-
-/* 6. LA IMAGEN Y SU BORDE */
 .img-border {
     margin-top: 35px;
     width: 140px;
@@ -91,7 +77,6 @@ header h1 {
     align-items: center;
     overflow: hidden;
 }
-
 .card-img {
     width: 100%;
     height: 100%;
@@ -105,18 +90,14 @@ header h1 {
     height: 100%;
     object-fit: cover;
 }
-
-/* 7. TEXTO Y DATOS */
 .card-data {
     width: 100%;
     padding: 20px 30px;
     color: #f8f1f1;
 }
-
 .card-data section {
     margin-bottom: 20px;
 }
-
 .card-data h3 {
     font-size: 0.8rem;
     color: rgba(3, 3, 3, 0.75);
@@ -125,7 +106,6 @@ header h1 {
     margin-top: 15px;
     margin-bottom: 5px;
 }
-
 .card-data p {
     font-size: 1.05rem;
     font-weight: 600;
@@ -137,8 +117,6 @@ header h1 {
 .card-data p:last-child {
     border-bottom: none;
 }
-
-/* 8. CARA TRASERA */
 .card-back {
     background-color: #2c3e50;
     color: white;
@@ -162,7 +140,6 @@ header h1 {
     list-style: none;
     width: 100%;
 }
-
 .card-back li {
     background-color: rgba(255, 255, 255, 0.08);
     padding: 15px;
@@ -171,12 +148,11 @@ header h1 {
     font-size: 1.1rem;
     transition: background-color 0.3s;
 }
-
 .card-back li:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-.ben-v-theme { background-color: #148a45; } /* Verde para Velásquez */
-.ben-r-theme { background-color: #2980b9; } /* Azul para Rojas */
+.ben-v-theme { background-color: #148a45; } 
+.ben-r-theme { background-color: #2980b9; } 
 .ben-v-img {
     background-image: url('imagen.png'); 
     background-size: cover;
@@ -185,22 +161,18 @@ header h1 {
     height: 100%;
 }
 .ben-r-img {
-    background-image: url('imagen2.png'); /* O el nombre de tu archivo */
+    background-image: url('imagen2.png'); 
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
 }
-/* Colores de letra solicitados para todas las tarjetas */
 .card-data h3 {
-    color: #000000 !important; /* Títulos en Negro (Nombre, Edad, etc.) */
+    color: #000000 !important; 
 }
-
 .card-data p {
-    color: #ffffff !important; /* Datos en Blanco (Benjamín, 22, etc.) */
+    color: #ffffff !important; 
 }
-
-/* Ajuste del contenedor para que las 4 tarjetas se ordenen solas */
 .portafolios-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
