@@ -1,0 +1,114 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #0d1424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    width: 320px;
+    height: 480px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+.card-container:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 28px;
+    background-color: #131e35;
+    border: 1px solid #1e2d4d;
+    color: #c8d8f0;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.img-border {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.img-border img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #2a4a8a;
+    object-fit: cover;
+}
+
+.card-data {
+    display: flex;
+    gap: 16px;
+}
+
+#datos-personales, #datos-academicos {
+    flex: 1;
+}
+
+h3 {
+    color: #5a7aaa;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 0.85rem;
+    color: #c8d8f0;
+}
+
+#habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 4px;
+}
+
+.badge {
+    padding: 3px 10px;
+    background: #1e2d4d;
+    border: 1px solid #2a4a8a;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    color: #9ab4e0;
+}
+
+.card-back h2 {
+    color: #e8f0ff;
+    margin-bottom: 16px;
+}
+
+.card-back ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-back ul li {
+    background: #1e2d4d;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+}
